@@ -1,0 +1,33 @@
+<!-- blogPost.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/blogPost.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display&family=Source+Serif+4:opsz@8..60&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <% if(locals.title) {%>
+        <h1><%= title %></h1>
+    <% } %>
+    
+    <% if(locals.content) {%>
+        <p><%= content %></p>
+    <% } %>
+
+    <form method="POST" action="/update/<%= title%>?_method=PATCH" >
+        <input type="submit" value="UPDATE" >
+    </form>
+
+    <form method="POST" action="/seePost/?_method=DELETE">
+        <input type="hidden" name="tit" value=<%=  title %>>
+        <button type="submit">DELETE</button>
+      </form>   
+    
+</body>
+</html>

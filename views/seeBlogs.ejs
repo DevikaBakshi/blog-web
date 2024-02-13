@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/seeBlogs.css"
+</head>
+<body>
+
+    <form action="/post" method="POST" >
+        <input type="submit" value="CREATE  BLOG" id="create">
+    </form>
+
+
+    <%if (locals.title_list ) {
+        if(title_list.length!==0){ %>
+        <h2> "The Adventure Continues: Explore Blogs Further Down!"</h2>
+        <ul>
+            <% for (var i = 0; i < title_list.length; i++) { %>
+                <li class="linkToBlog">
+                    <a href="/posts/<%= title_list[i] %>"><%= title_list[i] %></a>
+    
+                </li>
+            <% } %>
+        </ul>
+    
+    <% }
+    else{ %>
+        <h2> Oops! Nothing to Show</h2>
+    <% }
+     } %>
+</body>
+</html>

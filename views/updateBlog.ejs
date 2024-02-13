@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mind Canvas</title>
+    <link rel="stylesheet" href="/updateBlog.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display&family=Source+Serif+4:opsz@8..60&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Playfair+Display&family=Source+Serif+4:opsz@8..60&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <form method="POST" action="/seePost/?_method=PATCH" class="container">
+        <div class="title_box">
+        <label name="title" id="label">Title: </label>
+        <input type="hidden" name="prevTitle" value="<%= title %>" >
+        <input type="text" placeholder="enter blog title" id="title" name="title" value="<%= title %>" class="box"  required>
+        </div> 
+        <input type="text" placeholder="Share Your Thoughts Here!" name="newBlogPost" id="newBlogPost" value="<%= content %>"class="box" id="newBlogPost">
+        <input type="submit" value="UPDATE POST" id="post">
+    </form>
+</body>
+</html>

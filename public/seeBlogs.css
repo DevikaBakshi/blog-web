@@ -1,0 +1,17 @@
+*{
+    background-color: #9ddffd;
+    color: black;
+    font-family: 'Source Serif 4', serif;
+
+}
+#create{
+    position: relative;
+    top: 2%;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 2px;
+    background-color: #FCBAD3;
+    border: white solid 2px;
+    width: 10%;
+    height: 8%;
+}
+

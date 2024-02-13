@@ -1,0 +1,24 @@
+
+
+
+{
+  "name": "4.5-capstone-project-blog-application",
+  "version": "1.0.0",
+  "description": "Blog Web Application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "npm": "8.x"
+  },
+  "author": "Devika Bakshi",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "jsdom": "^24.0.0",
+    "method-override": "^3.0.0"
+  }
+}
