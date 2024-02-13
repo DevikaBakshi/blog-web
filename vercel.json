@@ -2,18 +2,18 @@
     "version": 2,
     "builds": [
       {
-        "src": "nodebb/build/index.js",
-        "use": "@vercel/node"
+        "src": "index.html",
+        "use": "@vercel/static-build"
       }
     ],
     "routes": [
       {
         "src": "/",
-        "dest": "nodebb/build/index.js"
+        "dest": "index.html"
       },
       {
-        "src": "/public/(.*)",
-        "dest": "nodebb/public/$1"
+        "src": "/(.*)",
+        "dest": "/$1"
       }
     ]
   }
