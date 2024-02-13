@@ -9,7 +9,7 @@ import path from "path";
 
 import { fileURLToPath } from "url";
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 let tit_list=[];
 var newBlog="";
 var del_flag=false;
@@ -64,7 +64,7 @@ app.post("/seePost",(req,res,next)=>{
     }
     
     var data1= req.body["newBlogPost"];
-    var fileN=__dirname+"/posts/"+newBlog+".txt";
+    const fileN = path.join(__dirname, "posts", `${newBlog}.txt`);
     // console.log(fileN);
     
     fs.writeFile(fileN,data1, (err) => {
