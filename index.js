@@ -23,7 +23,7 @@ const port=3000;
 app.listen(port,()=>{
     console.log(`Server is running on port ${port}`);
 });
-app.use(express.static("public"));
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
 
